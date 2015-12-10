@@ -1,0 +1,283 @@
+/*
+ * Gridism demonstration page
+ * These styles are all just for the Gridism demo page.
+ * You don’t need this styleshee in your project.
+ */
+
+/* General */
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  background: #FBF6F4;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+/* I use full-width horizontal sections a lot */
+body > header,
+body > section,
+body > footer {
+  display: block;
+  width: 100%;
+  clear: both;
+  float: left;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -.05em;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+a {
+  color: #c00;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+header, section {
+  border-bottom: 1px solid #eee;
+}
+
+header, section, footer {
+  border-top: 1px solid #fff;
+}
+
+section, footer {
+  padding: 30px 0;
+}
+
+header h1 a {
+  color: #333;
+  border-bottom: none;
+}
+
+header p {
+  margin: 2em 0;
+}
+
+.lead {
+  font-size: 1.5em;
+}
+
+p, pre {
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
+
+.button {
+  border-radius: 5px;
+  background: #efefef;
+  background-image: -moz-linear-gradient(#FCFCFC, #EFEFEF);
+  background-image: -webkit-linear-gradient(#FCFCFC, #EFEFEF);
+  background-image: -ms-linear-gradient(#FCFCFC, #EFEFEF);
+  background-image: linear-gradient(#FCFCFC, #EFEFEF);
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+  padding: 8px 16px;
+  text-shadow: 0 1px 0 #fff;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: .5em;
+}
+
+.button:hover, .button:focus {
+  outline: none;
+  border: 1px solid rgba(255,0,0,.5);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 0 10px rgba(255,0,0,.3);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+@media (min-width: 960px){
+  h1 {
+    font-size: 5em;
+  }
+  h2 {
+    font-size: 2.6em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  .lead {
+    font-size: 1.8em;
+  }
+}
+
+/* Styles to help demonstrate the grid */
+
+code, pre {
+  font-family: "Source Code Pro", Consolas, Menlo, Monaco, monospace;
+  background: #F1E3D5;
+  color: #333;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+pre {
+  padding: 10px;
+  text-align: center;
+}
+
+.demo p {
+  margin: 0;
+}
+
+.demo .unit pre {
+  margin: 0;
+  padding: 20px 0;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.demo .unit pre:hover {
+  background: #fc0;
+}
+
+.grid, .unit {
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.demo .unit .grid {
+  overflow: hidden;
+  background: rgba(241,227,213,.5);
+}
+
+.demo .unit .grid:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.demo .unit .grid:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+
+grid,
+.unit {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Set up some rules to govern the grid */
+.grid {
+  display: block;
+  clear: both;
+}
+.grid .unit {
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+
+/* This ensures the outer gutters are equal to the (doubled) inner gutters. */
+.grid .unit:first-child { padding-left: 20px; }
+.grid .unit:last-child { padding-right: 20px; }
+
+/* Nested grids already have padding though, so let’s nuke it */
+.unit .unit:first-child { padding-left: 0; }
+.unit .unit:last-child { padding-right: 0; }
+.unit .grid:first-child > .unit { padding-top: 0; }
+.unit .grid:last-child > .unit { padding-bottom: 0; }
+
+/* Let people nuke the gutters/padding completely in a couple of ways */
+.no-gutters .unit,
+.unit.no-gutters {
+  padding: 0 !important;
+}
+
+/* Wrapping at a maximum width is optional */
+.wrap .grid,
+.grid.wrap {
+  max-width: 978px;
+  margin: 0 auto;
+}
+
+/* Width classes also have shorthand versions numbered as fractions
+ * For example: for a grid unit 1/3 (one third) of the parent width,
+ * simply apply class="w-1-3" to the element. */
+.grid .whole,          .grid .w-1-1 { width: 100%; }
+.grid .half,           .grid .w-1-2 { width: 50%; }
+.grid .one-third,      .grid .w-1-3 { width: 33.3332%; }
+.grid .two-thirds,     .grid .w-2-3 { width: 66.6665%; }
+.grid .one-quarter,    .grid .w-1-4 { width: 25%; }
+.grid .three-quarters, .grid .w-3-4 { width: 75%; }
+.grid .one-fifth,      .grid .w-1-5 { width: 20%; }
+.grid .two-fifths,     .grid .w-2-5 { width: 40%; }
+.grid .three-fifths,   .grid .w-3-5 { width: 60%; }
+.grid .four-fifths,    .grid .w-4-5 { width: 80%; }
+.grid .golden-small,   .grid .w-g-s { width: 38.2716%; } /* Golden section: smaller piece */
+.grid .golden-large,   .grid .w-g-l { width: 61.7283%; } /* Golden section: larger piece */
+
+/* Clearfix after every .grid */
+.grid {
+  *zoom: 1;
+}
+.grid:before, .grid:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.grid:after {
+  clear: both;
+}
+
+/* Utility classes */
+.align-center { text-align: center; }
+.align-left   { text-align: left; }
+.align-right  { text-align: right; }
+.pull-left    { float: left; }
+.pull-right   { float: right; }
+
+/* Responsive Stuff */
+@media screen and (max-width: 568px) {
+  /* Stack anything that isn’t full-width on smaller screens */
+  .grid .unit {
+    width: 100% !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .unit .grid .unit {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  /* Sometimes, you just want to be different on small screens */
+  .center-on-mobiles {
+    text-align: center !important;
+  }
+  .hide-on-mobiles {
+    display: none !important;
+  }
+}
+
+/* Expand the wrap a bit further on larger screens */
+@media screen and (min-width: 1180px) {
+  .wider .grid {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
