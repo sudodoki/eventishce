@@ -8,13 +8,13 @@
 
 
 @font-face {
-    font-family: 'stampbor_grunge_russianRg';
-    src: url('stampbor_grunge_russian-webfont.eot');
-    src: url('stampbor_grunge_russian-webfont.eot?#iefix') format('embedded-opentype'),
-         url('stampbor_grunge_russian-webfont.woff2') format('woff2'),
-         url('stampbor_grunge_russian-webfont.woff') format('woff'),
-         url('stampbor_grunge_russian-webfont.ttf') format('truetype'),
-         url('stampbor_grunge_russian-webfont.svg#stampbor_grunge_russianRg') format('svg');
+    font-family: 'Stampbor';
+    src: url('fonts/stampbor_grunge_russian-webfont.eot');
+    src: url('fonts/stampbor_grunge_russian-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/stampbor_grunge_russian-webfont.woff2') format('woff2'),
+         url('fonts/stampbor_grunge_russian-webfont.woff') format('woff'),
+         url('fonts/stampbor_grunge_russian-webfont.ttf') format('truetype'),
+         url('fonts/stampbor_grunge_russian-webfont.svg#stampbor_grunge_russianRg') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -24,13 +24,13 @@
 
 
 @font-face {
-    font-family: 'summer_fontlight';
-    src: url('summer_font__light-webfont.eot');
-    src: url('summer_font__light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('summer_font__light-webfont.woff2') format('woff2'),
-         url('summer_font__light-webfont.woff') format('woff'),
-         url('summer_font__light-webfont.ttf') format('truetype'),
-         url('summer_font__light-webfont.svg#summer_fontlight') format('svg');
+    font-family: 'Summer';
+    src: url('fonts/summer_font__light-webfont.eot');
+    src: url('fonts/summer_font__light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/summer_font__light-webfont.woff2') format('woff2'),
+         url('fonts/summer_font__light-webfont.woff') format('woff'),
+         url('fonts/summer_font__light-webfont.ttf') format('truetype'),
+         url('fonts/summer_font__light-webfont.svg#summer_fontlight') format('svg');
     font-weight: normal;
     font-style: normal;
 
