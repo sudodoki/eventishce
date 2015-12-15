@@ -6,20 +6,34 @@
 
 /* General */
 
-@font-face {
-    font-family: Summer;
-    src: local("Summer"), url(fonts/Summer_Font_Light.otf);
-}
 
 @font-face {
-    font-family: Stampbor;
-    src: local("Stampbor"), url(fonts/Stampbor_Grunge_Russian.otf);
+    font-family: 'stampbor_grunge_russianRg';
+    src: url('stampbor_grunge_russian-webfont.eot');
+    src: url('stampbor_grunge_russian-webfont.eot?#iefix') format('embedded-opentype'),
+         url('stampbor_grunge_russian-webfont.woff2') format('woff2'),
+         url('stampbor_grunge_russian-webfont.woff') format('woff'),
+         url('stampbor_grunge_russian-webfont.ttf') format('truetype'),
+         url('stampbor_grunge_russian-webfont.svg#stampbor_grunge_russianRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
+
+
+
 @font-face {
-    font-family: Karton;
-    src: url(fonts/Karton.otf) format("opentype");
-}
+    font-family: 'summer_fontlight';
+    src: url('summer_font__light-webfont.eot');
+    src: url('summer_font__light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('summer_font__light-webfont.woff2') format('woff2'),
+         url('summer_font__light-webfont.woff') format('woff'),
+         url('summer_font__light-webfont.ttf') format('truetype'),
+         url('summer_font__light-webfont.svg#summer_fontlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 
 
 .logo {
