@@ -8,12 +8,12 @@
 
 @font-face {
     font-family: "Summer";
-    src: url("http://http://mashatimmpa.github.io/eventishce/fonts/Summer Font Light.otf") format("opentype");
+    src: url("http://mashatimmpa.github.io/eventishce/fonts/Summer Font Light.otf") format("opentype");
 }
 
 @font-face {
     font-family: "Stampbor";
-    src: url("fonts/Stampbor_Grunge_Russian.otf") format("opentype");
+    src: url("http://mashatimmpa.github.io/eventishce/fonts/Stampbor_Grunge_Russian.otf") format("opentype");
 }
 
 @font-face {
@@ -24,7 +24,7 @@
 
 .logo {
   font-family: "Stampbor";
-  color: black;
+  color: white;
 
 }
 
@@ -47,7 +47,7 @@ body > footer {
 
 
 header {
-  background-image: url("/img/bh_whole_main.png");
+  background-image: url("img/bh_whole_main.png");
 }
 
 
