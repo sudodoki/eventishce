@@ -8,12 +8,12 @@
 
 @font-face {
     font-family: Summer;
-    src: url(fonts/Summer_Font_Light.otf) format("opentype");
+    src: local("Summer"), url(fonts/Summer_Font_Light.otf) format("opentype");
 }
 
 @font-face {
     font-family: Stampbor;
-    src: url(fonts/Stampbor_Grunge_Russian.otf) format("opentype");
+    src: local("Stampbor"), url(fonts/Stampbor_Grunge_Russian.otf) format("opentype");
 }
 
 @font-face {
@@ -29,7 +29,7 @@
 }
 
 body {
-  font-family: "Summer", Arial, sans-serif;
+  font-family: Summer, Arial, sans-serif;
   color: #444;
   background: #FBF6F4;
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
