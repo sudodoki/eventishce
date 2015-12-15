@@ -8,23 +8,23 @@
 
 @font-face {
     font-family: "Summer";
-    src: url(http://http://mashatimmpa.github.io/eventishce/fonts/Summer Font Light.otf) format("opentype");
+    src: url("http://http://mashatimmpa.github.io/eventishce/fonts/Summer Font Light.otf") format("opentype");
 }
 
 @font-face {
     font-family: "Stampbor";
-    src: url(fonts/Stampbor_Grunge_Russian.otf) format("opentype");
+    src: url("fonts/Stampbor_Grunge_Russian.otf") format("opentype");
 }
 
 @font-face {
     font-family: "Karton";
-    src: url(fonts/Karton.otf) format("opentype");
+    src: url("fonts/Karton.otf") format("opentype");
 }
 
 
 .logo {
   font-family: "Stampbor";
-  color: white;
+  color: black;
 
 }
 
