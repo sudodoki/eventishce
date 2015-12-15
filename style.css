@@ -48,6 +48,8 @@ body > footer {
 
 header {
   background-image: url("img/bh_whole_main.png");
+  height: 100%;
+  width: 100%;
 }
 
 
