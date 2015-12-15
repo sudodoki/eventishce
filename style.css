@@ -37,13 +37,13 @@
 
 
 .logo {
-  font-family: Stampbor;
+  font-family: 'Stampbor';
   color: black;
 
 }
 
 body {
-  font-family: Summer, Arial, sans-serif;
+  font-family: 'Summer', Arial, sans-serif;
   color: #444;
   background: #FBF6F4;
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
