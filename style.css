@@ -8,12 +8,12 @@
 
 @font-face {
     font-family: Summer;
-    src: local("Summer"), url(fonts/Summer_Font_Light.otf) format("opentype");
+    src: local("Summer"), url(fonts/Summer_Font_Light.otf);
 }
 
 @font-face {
     font-family: Stampbor;
-    src: local("Stampbor"), url(fonts/Stampbor_Grunge_Russian.otf) format("opentype");
+    src: local("Stampbor"), url(fonts/Stampbor_Grunge_Russian.otf);
 }
 
 @font-face {
