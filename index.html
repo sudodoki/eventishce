@@ -1,262 +1,118 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Gridism • a simple responsive CSS grid by @cobyism</title>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ивентіще: події та свята з душею</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="..js/onepage-scroll-master/onepage-scroll.css">
   
-  <script src="//cdn.optimizely.com/js/2350390699.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+   
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     
+   <link rel="stylesheet" type="text/css" href="../js/fullPage.js-master/jquery.fullPage.css" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- This following line is needed in case of using the default easing option or when using another
+ one rather than "linear" or "swing". You can also add the full jQuery UI instead of this file if you prefer -->
+  <script src="../js/fullPage.js-master/vendors/jquery.easings.min.js"></script>
+
+
+<!-- This following line needed in the case of using the plugin option `scrollOverflow:true` -->
+  <script type="text/javascript" src="../js/fullPage.js-master/vendors/jquery.slimscroll.min.js"></script>
+
+  <script type="text/javascript" src="../js/fullPage.js-master/jquery.fullPage.js"></script>
+
+    <script type="text/javascript" src="../js/stellar.js-master/jquery.stellar.min.js"></script>
+
+   
+
+    <script type="text/javascript">
+      var causeRepaintsOn = $('.score-text');
+
+      $(window).resize(function () {
+      causeRepaintsOn.css("z-index");
+        });     
+    </script>
+   
+ <script type="text/javascript">
+      $(document).ready(function() {
+      $('#fullpage').fullpage();
+      });
+    </script>
   
-  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Montserrat:700|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="gridism.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="wrap wider">
 
-  <header>
-    <div class="grid">
-      <div class="unit whole center-on-mobiles">
-        <h1><a href="http://cobyism.com/gridism">gridism.</a></h1>
-        <p class="lead">A simple responsive CSS&nbsp;grid by&nbsp;<a href="http://cobyism.com">@cobyism</a>.</p>
-        <p>
-          <a href="https://github.com/cobyism/gridism" class="button">View on GitHub</a>
-          <a href="https://twitter.com/cobyism" class="button" target="_blank">Follow @cobyism</a>
-        </p>
-      </div>
-    </div>
-  </header>
-
-  <section class="instructions">
-    <div class="grid">
-      <div class="unit one-third">
-        <h2>Simple</h2>
-        <p>
-          Each <code>.grid</code> element is a horizontal row which can contain
-          <code>.unit</code> elements of various widths.
-          Width combinations are illustrated&nbsp;below.
-        </p>
-      </div>
-      <div class="unit one-third">
-        <h2>Responsive</h2>
-        <p>
-          Units get stacked on screens 568px or smaller.
-          Grids in a <code>.wrap</code> have maximum widths of 978px, or 1140px
-          with the addition of <code>.wider</code>.
-        </p>
-      </div>
-      <div class="unit one-third">
-        <h2>Easy</h2>
-        <p>
-          All units have even inner and outer gutters.
-          You can turn gutters off with <code>.no-gutters</code>.
-          There are also <a href="https://github.com/cobyism/gridism/blob/gh-pages/gridism.css">a few other</a> commonly needed&nbsp;classes.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="demo">
-    <div class="grid">
-      <div class="unit whole">
-        <pre>.whole</pre>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit half">
-        <pre>.half</pre>
-      </div>
-      <div class="unit half">
-        <pre>.half</pre>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit one-third">
-        <pre>.one-third</pre>
-      </div>
-      <div class="unit two-thirds">
-        <pre>.two-thirds</pre>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit one-quarter">
-        <pre>.one-quarter</pre>
-      </div>
-      <div class="unit three-quarters">
-        <pre>.three-quarters</pre>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit one-fifth">
-        <pre>.one-fifth</pre>
-      </div>
-      <div class="unit four-fifths">
-        <pre>.four-fifths</pre>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit two-fifths">
-        <pre>.two-fifths</pre>
-      </div>
-      <div class="unit three-fifths">
-        <pre>.three-fifths</pre>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit golden-large">
-        <pre>.golden-large</pre>
-      </div>
-      <div class="unit golden-small">
-        <pre>.golden-small</pre>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit one-quarter align-right center-on-mobiles">
-        <h2>Nested grids</h2>
-        <p>Nested grids also work, but the markup gets gnarly pretty&nbsp;quickly.</p>
-      </div>
-      <div class="unit three-quarters">
-        <div class="grid">
-          <div class="unit whole">
-            <p class="align-center">Gridception!</p>
-          </div>
-        </div>
-        <div class="grid">
-          <div class="unit one-third">
-            <pre>★</pre>
-          </div>
-          <div class="unit two-thirds">
-            <div class="grid">
-              <div class="unit whole">
-                <p class="align-center">Gridception!</p>
-              </div>
-            </div>
-            <div class="grid">
-              <div class="unit two-fifths">
-                <pre>★</pre>
-              </div>
-              <div class="unit three-fifths">
-                <pre>★</pre>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid">
-          <div class="unit four-fifths">
-            <div class="grid">
-              <div class="unit whole">
-                <p class="align-center">Gridception!</p>
-              </div>
-            </div>
-            <div class="grid">
-              <div class="unit one-quarter">
-                <pre>★</pre>
-              </div>
-              <div class="unit one-quarter">
-                <pre>★</pre>
-              </div>
-              <div class="unit one-quarter">
-                <pre>★</pre>
-              </div>
-              <div class="unit one-quarter">
-                <pre>★</pre>
-              </div>
-            </div>
-          </div>
-          <div class="unit one-fifth">
-            <pre>★</pre>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="usage">
-    <div class="grid">
-      <div class="unit whole">
-        <h2>Download</h2>
-        <p class="lead">You have two main options for using Gridism in your&nbsp;project.</p>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit one-third">
-        <h3>A. Bower</h3>
-        <p>Gridism can be installed using the <a href="http://bower.io">Bower</a> package&nbsp;manager.</p>
-        <pre><code>bower install gridism</code></pre>
-      </div>
-      <div class="unit one-third">
-        <h3>B. Manual</h3>
-        <p><a href="https://github.com/cobyism/gridism/archive/gh-pages.zip">Download the ZIP</a>, extract the source code, and copy <code>gridism.css</code> into your project’s&nbsp;directory.</p>
-      </div>
-      <div class="unit one-third">
-        <h3>Elsewise</h3>
-        <p>Of course, you could also clone <a href="https://github.com/cobyism/gridism">the repository</a> using your terminal, or even add it as a <a href="http://git-scm.com/book/en/Git-Tools-Submodules">submodule</a> of your&nbsp;project.</p>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit whole">
-        <h2>Installation</h2>
-        <p class="lead">Once you’ve acquired the Gridism source code, there’s a couple of other things you’ll&nbsp;probably want&nbsp;to&nbsp;do.</p>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit whole">
-        <h3>1. Stylesheet</h3>
-        <p>Add the following stylesheet to the <code>&lt;head&gt;</code> section of your project’s HTML. If you didn’t use Bower, you may need to adjust the path to the CSS file to match your file&nbsp;structure.</p>
-        <pre><code>&lt;link rel="stylesheet" href="bower_components/gridism/gridism.css"&gt;</code></pre>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="unit whole">
-        <h3>2. Viewport</h3>
-        <p>Set the scale of your viewport to the width of the device. Placing the following tag in the <code>&lt;head&gt;</code> of your HTML ensures the viewport doesn’t load zoomed-out on mobiles and&nbsp;tablets.</p>
-        <pre><code>&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</code></pre>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="grid">
-      <div class="unit half">
-        <div class="center-on-mobiles">
-          <p>© Coby Chapple — All rights reserved.</p>
-        </div>
-      </div>
-      <div class="unit half">
-        <div class="align-right center-on-mobiles">
-          <p>This project is <a href="https://github.com/cobyism/gridism">open-source</a> and accepting pull&nbsp;requests. Fork&nbsp;at&nbsp;will.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script type="text/javascript">
-    var _gauges = _gauges || [];
-    (function() {
-      var t   = document.createElement('script');
-      t.type  = 'text/javascript';
-      t.async = true;
-      t.id    = 'gauges-tracker';
-      // Please change this line below to your own account if you’re using this code,
-      // otherwise I get to see all the analytics for your site.
-      t.setAttribute('data-site-id', '50ed90bdf5a1f50492000007');
-      t.src = '//secure.gaug.es/track.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(t, s);
-    })();
-  </script>
+  </head>
   
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <body>
+
+      <div class="main-screen">
+        <div class="container">
+        <header>
+           <div class="logo"><h1>ивент</h1></div>
+        </header>
+
+        <div class="row">
+          <!-- меню -->
+            <div class="nav col-md-3">
+              <ul class="main-menu">
+                <li><a href="#">Свята</a></li>
+                <li><a href="#">Ціни</a></li>
+                <li><a href="#">Наші роботи</a></li>
+                <li><a href="#">Контакти</a></li>
+              </ul>
+            </div>
+                <!-- праздничній круг -->
+            <div class="circle circle-border col-sm-12 col-sm-offset-0 col-md-4 col-md-offset-2">
+              <div class="circle-inner">
+               <p class="score-text first-line">зробимо</p><br>
+               <p class="score-text second-line">ваше свято</p><br>
+               <p class="score-text third-line">неповторним</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- </div> -->
+         
+      <div class="main events">
+          <header>
+            <h2 class="text-center">Обери свою подію</h2>
+          </header>
+          <div id="fullpage">
+          <div class="section event wedding">
+            <div class=" front-layer">
+              <div class="container" >
+                <h3 class="text-center">Весілля</h3>
+                <p >Ніжне або шалене, камерне або півторитисячне,
+                вінтажне або гранжеве - плануйте сміливо, влаштуємо згідно будь-яким вашим  забаганкам. Вашу мрію ми втілимо сміливо й креативно, ви можете бути за кермом всього свята або ж залишити організацію цілком нашим професіоналам та отримати впродовж свята емоції здивування</p>
+              </div>
+            </div>
+         <!--    <div class="back-layer" >
+                <img src="img/wedding_bg_front.png">
+            </div> -->
+          </div>
+          <div class="section event corporate">  
+            <div class="front-layer">
+              <div class="container" >
+                <h3 class="text-center">Корпоративне свято</h3>
+                <p>Подія, що піднесе відносини всередині вашого колектива до небаченого досі рівня. Стрибки з парашутами або політ на повітряній кулі, мисливські пригоди або розваги в п'ятизірковому готелі - ми можемо влаштувати все! Запрошуйте всіх</p>
+              </div>
+            </div>
+          <!--   <div class="back-layer" >
+                <img src="img/corporate_bg_front.png">
+            </div> -->
+          </div>
+       </div>
+     </div>
+      
+     
     
-    // Please change this to your own account if you’re using this code,
-    // otherwise I get to see all the analytics for your site.
-    ga('create', 'UA-31312255-3', 'auto');
-    ga('send', 'pageview');
-  </script>
-  
-</body>
+    <!--  <footer>
+     </footer> -->
+   </body>
+
 </html>
+
